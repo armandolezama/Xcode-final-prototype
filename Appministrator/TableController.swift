@@ -10,7 +10,11 @@ import UIKit
 
 class TableController: UIViewController {
     
+    var nombresAlumnosArreglo = ["espacio 0", " espacio1"]
     
+    var buscando: Bool = false
+    
+    var alumnoBuscado = [String]()
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -21,18 +25,40 @@ class TableController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if buscando {
+            return alumnoBuscado.count
+        } else {
+            return nombresAlumnosArreglo.count
+        }
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if buscando {
+            cell?.textLabel?.text = alumnoBuscado[indexPath.row]
+        } else {
+            cell?.textLabel?.text = nombresAlumnosArreglo[indexPath.row]
+        }
+        return cell!
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        alumnoBuscado = nombresAlumnosArreglo.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        buscando = true
+        tbView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        buscando = false
+        searchBar.text = ""
+        tbView.reloadData()
+    }
 
+    
 }
+
+
 
 

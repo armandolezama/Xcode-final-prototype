@@ -10,7 +10,9 @@ import UIKit
 
 class TableController: UIViewController {
     
-    var nombresAlumnosArreglo = ["espacio 0", " espacio1"]
+
+    
+    var nombresAlumnosArreglo:[String] = []
     
     var buscando: Bool = false
     

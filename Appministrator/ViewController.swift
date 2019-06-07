@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     let name = Expression<String>("nombre")
     let email = Expression<String>("email")
     
+    
     //¿Cómo multiplicar las columnas de asistencias sin invocar más líneas de código?
     //let asistencias = Expression<Bool>("asistencias")
     let grupo = Expression<String>("grupo")
@@ -110,5 +111,19 @@ class ViewController: UIViewController {
     }
 
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destViewController : TableController = segue.destination as! TableController
+        var i:Int = 0;
+        do{
+            let users = try self.database.prepare(self.usersTableNew)
+            for user in users{
+                destViewController.nombresAlumnosArreglo.insert(user[self.name], at: i)
+                i = i + 1
+            }
+        } catch{
+            print(error)
+        }
+    }
+    
 }
 

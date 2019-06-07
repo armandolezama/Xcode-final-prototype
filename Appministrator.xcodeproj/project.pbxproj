@@ -17,6 +17,7 @@
 		BC6843CB2295F01C005A8A89 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6843B22295DF9C005A8A89 /* SQLite.framework */; };
 		BC6843CC2295F01C005A8A89 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BC6843B22295DF9C005A8A89 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BC8B0D4F22A5C3E60029F924 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8B0D4E22A5C3E60029F924 /* TableController.swift */; };
+		BCAFAB5022AAF7440044BB06 /* CellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFAB4F22AAF7440044BB06 /* CellTableViewController.swift */; };
 		BCF509CE229F298900D4CAAA /* Dias habiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF509CD229F298900D4CAAA /* Dias habiles.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,7 @@
 		BC6843A12295DF26005A8A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC6843A72295DF9C005A8A89 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../../Downloads/SQLite.swift-cf4183f4ef54c5c9e82176cc46451934c8fdec2a/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		BC8B0D4E22A5C3E60029F924 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		BCAFAB4F22AAF7440044BB06 /* CellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableViewController.swift; sourceTree = "<group>"; };
 		BCF509CD229F298900D4CAAA /* Dias habiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dias habiles.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 				BC6843A12295DF26005A8A89 /* Info.plist */,
 				BC6843992295DF24005A8A89 /* Appministrator.xcdatamodeld */,
 				BC8B0D4E22A5C3E60029F924 /* TableController.swift */,
+				BCAFAB4F22AAF7440044BB06 /* CellTableViewController.swift */,
 			);
 			path = Appministrator;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				BCF509CE229F298900D4CAAA /* Dias habiles.swift in Sources */,
 				BC8B0D4F22A5C3E60029F924 /* TableController.swift in Sources */,
 				BC68439B2295DF24005A8A89 /* Appministrator.xcdatamodeld in Sources */,
+				BCAFAB5022AAF7440044BB06 /* CellTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

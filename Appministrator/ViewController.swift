@@ -90,6 +90,7 @@ class ViewController: UIViewController {
         } catch{
             print(error)
         }
+        
     }
     
     
@@ -111,19 +112,30 @@ class ViewController: UIViewController {
     }
 
 
+    var misNombres:[String] = []
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var destViewController : TableController = segue.destination as! TableController
+        guard let destViewController = segue.destination as? TableController else {return}
+        
         var i:Int = 0;
         do{
             let users = try self.database.prepare(self.usersTableNew)
             for user in users{
-                destViewController.nombresAlumnosArreglo.insert(user[self.name], at: i)
+                misNombres.insert(user[self.name], at: i)
                 i = i + 1
             }
+            print(misNombres)
         } catch{
             print(error)
         }
+        
+        destViewController.nombresAlumnosArreglo = misNombres
+        print(destViewController.nombresAlumnosArreglo)
+        
     }
     
+    
+    /*
+     */
 }
 

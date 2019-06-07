@@ -10,8 +10,6 @@ import UIKit
 
 class TableController: UIViewController {
     
-
-    
     var nombresAlumnosArreglo:[String] = []
     
     var buscando: Bool = false
@@ -25,7 +23,6 @@ class TableController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

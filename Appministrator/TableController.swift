@@ -22,10 +22,15 @@ class TableController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("En el table view")
+        print(nombresAlumnosArreglo)
     }
 
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("En la funcion tableView")
+        
         if buscando {
             return alumnoBuscado.count
         } else {

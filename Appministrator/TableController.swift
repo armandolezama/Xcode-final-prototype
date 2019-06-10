@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableController: UIViewController {
+class TableController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     var nombresAlumnosArreglo:[String] = []
     
